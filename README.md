@@ -7,4 +7,4 @@ This repository is the official implementation:
 
 ## 📢 Update
 
-- (2026/04/23) The benchmark method [ZeroRS](#) is released.
+- (2026/04/05) The benchmark method [ZeroRS](#) is released.
