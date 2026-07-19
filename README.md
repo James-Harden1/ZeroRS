@@ -2,28 +2,18 @@
 
 Zero-shot remote sensing referring segmentation with Qwen2.5-VL, ODISE, and SAM.
 
-## Layout
+## Results
+
+![Main experiment results](main_experiment_results.png)
+
+## Files
 
 ```text
 zerors/
-  attention.py
-  point_box_refiner.py
-  selection.py
-  pipeline.py
-  providers.py
 run_zerors.py
 odise_refiner.py
-assets/point_box_prompt_refinement.svg
+tests/
 ```
-
-## Method
-
-1. Qwen2.5-VL produces a query-conditioned attention map.
-2. Salient connected regions are converted into positive point prompts and local box prompts.
-3. SAM produces point-box masks; ODISE produces independent mask proposals.
-4. The proposals are scored with the attention map. Low-confidence outputs use region-growing box prompts, then point prompts.
-
-The module figure is available at [assets/point_box_prompt_refinement.svg](assets/point_box_prompt_refinement.svg).
 
 ## Setup
 
