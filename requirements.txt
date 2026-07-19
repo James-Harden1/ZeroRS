@@ -4,6 +4,3 @@ Pillow>=10.0
 tqdm>=4.66
 torch>=2.1
 transformers>=4.49
-
-# Install SAM, ODISE/Detectron2, and qwen-vl-utils following their upstream
-# instructions; their CUDA build must match the installed PyTorch version.

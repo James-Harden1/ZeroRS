@@ -57,7 +57,7 @@ def main() -> None:
     sam = SamPredictor(sam_model_registry["vit_h"](checkpoint=str(config.sam_checkpoint)).to(device))
     attention = QwenAttentionProvider(model, processor, config.attention_layers, config.attention_weights)
     if args.odise_config:
-        from odise_refiner import OdiseRefiner  # Rename the legacy ODISE helper to this importable filename.
+        from odise_refiner import OdiseRefiner
         diffusion = OdiseCandidateProvider(OdiseRefiner(str(args.odise_config), str(args.odise_weights)))
     else:
         diffusion = lambda _image, _query: []
