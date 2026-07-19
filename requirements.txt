@@ -1,2 +1,9 @@
+numpy>=1.24
+opencv-python>=4.8
+Pillow>=10.0
+tqdm>=4.66
+torch>=2.1
+transformers>=4.49
 
-python=1.0
+# Install SAM, ODISE/Detectron2, and qwen-vl-utils following their upstream
+# instructions; their CUDA build must match the installed PyTorch version.
