@@ -59,5 +59,5 @@ Use `--limit N` on all three commands for a smaller consistent subset.
 ## Check
 
 ```bash
-python -m compileall zerors generate_odise_candidates.py generate_vlm_sam_candidates.py evaluate_zerors.py run_zerors.py
+python -m compileall zerors generate_odise_candidates.py generate_vlm_sam_candidates.py evaluate_zerors.py
 ```
