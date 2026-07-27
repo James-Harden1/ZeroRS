@@ -11,9 +11,9 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from odise_refiner import OdiseRefiner
 from zerors.data import candidate_path, load_samples, read_bgr, sample_image_path, save_masks
 from zerors.odise_candidates import candidates_from_panoptic, clean_query
+from zerors.odise_refiner import OdiseRefiner
 
 
 def parse_args() -> argparse.Namespace:

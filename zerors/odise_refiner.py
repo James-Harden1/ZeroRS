@@ -1,3 +1,5 @@
+"""ODISE model adapter used by the candidate-generation stage."""
+
 import torch
 from detectron2.config import LazyConfig, instantiate
 from detectron2.data import MetadataCatalog
