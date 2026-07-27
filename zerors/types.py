@@ -1,26 +1,25 @@
+"""Small data records used by candidate verification."""
+
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from typing import Any
-
-import numpy as np
+from dataclasses import dataclass
 
 
-@dataclass
-class MaskCandidate:
-    """A binary segmentation proposal plus provenance and confidence."""
+@dataclass(frozen=True)
+class TriggerPoint:
+    x: int
+    y: int
+    value: float
 
-    mask: np.ndarray
+
+@dataclass(frozen=True)
+class MaskScore:
+    point_score: float
+    mean_attention: float
+
+
+@dataclass(frozen=True)
+class SelectionResult:
+    mask: object
     source: str
-    confidence: float = 0.0
-    metadata: dict[str, Any] = field(default_factory=dict)
-
-
-@dataclass
-class PromptRegion:
-    """Salient-region prompts derived from a VLM attention heatmap."""
-
-    centroid: tuple[int, int]
-    points: np.ndarray
-    box: np.ndarray
-    saliency: float
+    score: MaskScore | None

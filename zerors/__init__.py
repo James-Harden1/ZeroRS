@@ -1,7 +1,5 @@
-"""ZeroRS: training-free remote-sensing referring segmentation."""
+"""ZeroRS: an organized implementation of the original training-free pipeline."""
 
-from .config import ZeroRSConfig
-from .pipeline import ZeroRSPipeline
-from .point_box_refiner import PointBoxPromptRefiner
+from .config import PipelinePaths, PipelineSettings
 
-__all__ = ["PointBoxPromptRefiner", "ZeroRSConfig", "ZeroRSPipeline"]
+__all__ = ["PipelinePaths", "PipelineSettings"]
